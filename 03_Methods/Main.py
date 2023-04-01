@@ -9,14 +9,27 @@ class Hero:  # template
         self.power = inputPower
         self.armor = inputArmor
         Hero.jumlah += 1
-        print("membuat Hero dengan nama " + inputName)
+        
+    # void function, methos tanpa return
+    def siapa(self):
+      print("namaku adalah " + self.name)
+    
+    # method dengna argumen 
+    def healthUp(self, up):
+      self.health += up
+    
+    # method dengan return 
+    def getHelth(self):
+      return self.health
 
 
 hero1 = Hero("Sniper", 100, 10, 4)
-print(Hero.jumlah)
 hero2 = Hero("Mirana", 100, 15, 1)
-print(Hero.jumlah)
 
+hero1.siapa()
+hero1.healthUp(10)
+
+print(hero1.getHelth())
 
 
 
