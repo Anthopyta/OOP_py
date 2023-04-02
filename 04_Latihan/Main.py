@@ -15,9 +15,11 @@ class Hero:
     attack_diterima = attackPower_lawan / self.armorNumber
     print("Seranagan terasa: " + str(attack_diterima))
     self.health -= attack_diterima
-    print("darah" + self.name + " tersisa " + str(attack_diterima))
+    print("darah " + self.name + " tersisa " + str(self.health))
     
 sniper = Hero("Sniper", 100, 10, 5)
-rikimaru = Hero("rikimaru", 100, 5, 10)
+rikimaru = Hero("rikimaru", 100, 20, 10)
 
 sniper.serang(rikimaru)
+print("\n")
+rikimaru.serang(sniper)
